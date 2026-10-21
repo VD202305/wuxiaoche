@@ -8,13 +8,19 @@
 <body style="max-width:40em;margin:2em auto;padding:0 1em;font-family:sans-serif;line-height:1.6">
 <h1>wuxiaoche</h1>
 <p>wuxiaoche is a personal assistant that runs only on its developer's own computer. It is not offered to anyone else.</p>
-<p>It can add an event to the developer's own Google Calendar, only after the developer says yes to that event.</p>
+<p>It can read the developer's own Google Calendars (read-only) to answer questions like "what's on tomorrow". It can add an event to the developer's personal Google Calendar, only after the developer says yes to that event.</p>
 
 <h2 id="privacy">Privacy Policy</h2>
 <ul>
-<li>Who uses it: only its developer, on the developer's own computer.</li>
-<li>Google data used: the Google Calendar permission "calendar.events", only to create events the developer has agreed to. It does not read existing calendar events.</li>
-<li>Storage: the authorization file stays on the developer's computer. There is no server. Nothing is collected, sold, or shared.</li>
+<li>Who uses it: only its developer, on the developer's own computer, with the developer's own Google accounts.</li>
+<li>Google data used:
+  <ul>
+  <li>"calendar.events": only to create events the developer has agreed to, on the developer's personal calendar.</li>
+  <li>"calendar.events.readonly": to read events from calendars the developer picked. It requests only times, status, titles, and when an event was created or last changed. It never requests attendees, locations, or descriptions.</li>
+  <li>"calendar.calendarlist.readonly": used only during setup, to list the developer's calendars once so the developer can pick which ones to read.</li>
+  </ul>
+</li>
+<li>Storage: authorization files and calendar data stay on the developer's computer. There is no server. Nothing is collected, sold, or shared.</li>
 <li>wuxiaoche's use of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements.</li>
 <li>Remove access at any time at https://myaccount.google.com/connections (choose wuxiaoche, then remove its access).</li>
 <li>If the app's use of Google data changes, this page will be updated first.</li>
